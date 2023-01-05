@@ -138,17 +138,15 @@
     <ClInclude Include="DataStructures\SkipList\Source\Node_imp.h" />
     <ClInclude Include="DataStructures\SkipList\Source\SkipList_imp.h" />
     <ClInclude Include="Engine\Engine.h" />
-    <ClInclude Include="Tests\doctest.h" />
     <ClInclude Include="TravelRoutes\Route.h" />
+    <ClInclude Include="TravelRoutes\RouteIO.h" />
     <ClInclude Include="TravelRoutes\TrainConnection.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine\Source\Engine.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Tests\RouteTests.cpp" />
-    <ClCompile Include="Tests\SkipListTests.cpp" />
-    <ClCompile Include="Tests\Tests.cpp" />
     <ClCompile Include="TravelRoutes\Source\Route.cpp" />
+    <ClCompile Include="TravelRoutes\Source\RouteIO.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="IO\Input\Input1.txt" />

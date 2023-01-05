@@ -45,16 +45,34 @@
     <ClInclude Include="DataStructures\SkipList\Source\Iterator_imp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Tests\doctest.h">
+    <ClInclude Include="Engine\Engine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TravelRoutes\Route.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TravelRoutes\TrainConnection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TravelRoutes\RouteIO.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Tests\Tests.cpp">
+    <ClCompile Include="Engine\Source\Engine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Tests\SkipListTests.cpp">
+    <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TravelRoutes\Source\Route.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TravelRoutes\Source\RouteIO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="IO\Input\Input1.txt" />
   </ItemGroup>
 </Project>
