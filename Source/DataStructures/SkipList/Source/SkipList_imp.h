@@ -13,6 +13,13 @@ SkipList<T>::SkipList(T* arrayOfData, std::size_t sizeOfArrayOfData) {
 }
 
 template<typename T>
+inline SkipList<T>::SkipList(const std::vector<std::string>& vectorOfData) {
+	for (std::size_t index{ 0 }; index < vectorOfData.size(); ++index) {
+		PushBack(vectorOfData[index]);
+	}
+}
+
+template<typename T>
 inline SkipList<T>::SkipList(const SkipList<T>& other) {
 	try {
 		CopyDataFrom(other);

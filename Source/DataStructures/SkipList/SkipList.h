@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <functional>
+#include <vector>
 
 #include "Node.h"
 #include "Iterator.h"
@@ -11,6 +12,7 @@ class SkipList {
 public:
 	SkipList();
 	SkipList(T* arrayOfData, std::size_t sizeOfArrayOfData);
+	SkipList(const std::vector<std::string>& vectorOfData);
 	SkipList(const SkipList<T>& other);
 	~SkipList();
 
