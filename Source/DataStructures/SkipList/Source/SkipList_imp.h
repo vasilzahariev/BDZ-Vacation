@@ -13,6 +13,13 @@ SkipList<T>::SkipList(T* arrayOfData, std::size_t sizeOfArrayOfData) {
 }
 
 template<typename T>
+inline SkipList<T>::SkipList(const std::vector<std::string>& vectorOfData) {
+	for (std::size_t index{ 0 }; index < vectorOfData.size(); ++index) {
+		PushBack(vectorOfData[index]);
+	}
+}
+
+template<typename T>
 inline SkipList<T>::SkipList(const SkipList<T>& other) {
 	try {
 		CopyDataFrom(other);
@@ -186,6 +193,21 @@ inline void SkipList<T>::AddSkipToNodeWithVal(const T& nodeVal, const T& skipToV
 	Node<T>* node{ FindNodeWithValue(nodeVal)};
 
 	node->m_skip = FindNodeWithValue(skipToVal);
+}
+
+template<typename T>
+inline std::size_t SkipList<T>::GetPositionOfValue(const T& val) {
+	std::size_t position{ 1 };
+
+	for (T elem : *this) {
+		if (elem == val) {
+			return position;
+		}
+
+		++position;
+	}
+
+	throw std::logic_error("There is no such element in the SkipList");
 }
 
 template<typename T>
