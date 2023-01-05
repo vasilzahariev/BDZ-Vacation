@@ -30,6 +30,8 @@ public:
 
 	void AddSkipToNodeWithVal(const T& nodeVal, const T& skipToVal);
 
+	std::size_t GetPositionOfValue(const T& val);
+
 	T& At(std::size_t position);
 
 	Iterator<T> begin() const;

@@ -16,7 +16,6 @@ public:
 	std::vector<std::string> FindBestRoute();
 
 private:
-	std::map<std::string, std::size_t> m_cityOrder{ };
 	std::queue<std::string> m_citiesToVisit{ };
 	SkipList<std::string> m_cities{ };
 };

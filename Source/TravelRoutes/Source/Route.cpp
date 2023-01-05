@@ -3,10 +3,6 @@
 Route::Route(const std::vector<std::string>& cities, const std::vector<TrainConnection>& fastConnections,
 			 const std::queue<std::string>& citiesToVisit)
 	: m_cities(cities), m_citiesToVisit(citiesToVisit) {
-	for (std::size_t index{ 0 }; index < cities.size(); ++index) {
-		m_cityOrder.insert({ cities[index], index + 1 });
-	}
-
 	for (TrainConnection fastTravel : fastConnections) {
 		m_cities.AddSkipToNodeWithVal(fastTravel.m_fromStation, fastTravel.m_toStation);
 	}
@@ -25,7 +21,7 @@ std::vector<std::string> Route::FindBestRoute() {
 
 		Iterator<std::string> skipIter = iter.Skip();
 
-		if (!m_citiesToVisit.empty() && m_cityOrder.at(*skipIter) <= m_cityOrder.at(m_citiesToVisit.front())) {
+		if (!m_citiesToVisit.empty() && m_cities.GetPositionOfValue(*skipIter) <= m_cities.GetPositionOfValue(m_citiesToVisit.front())) {
 			iter = skipIter;
 		}
 		else {

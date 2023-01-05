@@ -196,6 +196,21 @@ inline void SkipList<T>::AddSkipToNodeWithVal(const T& nodeVal, const T& skipToV
 }
 
 template<typename T>
+inline std::size_t SkipList<T>::GetPositionOfValue(const T& val) {
+	std::size_t position{ 1 };
+
+	for (T elem : *this) {
+		if (elem == val) {
+			return position;
+		}
+
+		++position;
+	}
+
+	throw std::logic_error("There is no such element in the SkipList");
+}
+
+template<typename T>
 inline T& SkipList<T>::At(std::size_t position) {
 	if (position < 0 || position >= nSize) {
 		throw std::length_error("Invalid index");
