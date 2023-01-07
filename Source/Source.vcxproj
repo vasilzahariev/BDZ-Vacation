@@ -127,6 +127,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="DataStructures\Graph\Edge.h" />
+    <ClInclude Include="DataStructures\Graph\Graph.h" />
+    <ClInclude Include="DataStructures\Graph\Vertex.h" />
     <ClInclude Include="DataStructures\LinkedList\LinkedList.h" />
     <ClInclude Include="DataStructures\LinkedList\LinkedListNode.h" />
     <ClInclude Include="DataStructures\LinkedList\Source\SkipListNode_imp.h" />
