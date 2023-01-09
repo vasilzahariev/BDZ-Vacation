@@ -26,3 +26,5 @@ private:
 	void CopyDataFrom(const Graph<T>& other);
 	void DeleteData();
 };
+
+#include "Source/Graph_imp.h"
