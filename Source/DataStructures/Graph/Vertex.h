@@ -13,6 +13,7 @@ public:
 	std::vector<Edge<Vertex<T>>> m_edges{ };
 	
 	T m_data{ };
+	bool bVisited{ false };
 };
 
 #include "Source/Vertex_imp.h"

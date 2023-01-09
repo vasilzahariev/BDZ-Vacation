@@ -127,8 +127,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CityTrip\CityTrip.h" />
+    <ClInclude Include="CityTrip\EdgeConnection.h" />
     <ClInclude Include="DataStructures\Graph\Edge.h" />
     <ClInclude Include="DataStructures\Graph\Graph.h" />
+    <ClInclude Include="DataStructures\Graph\Source\Graph_imp.h" />
+    <ClInclude Include="DataStructures\Graph\Source\Vertex_imp.h" />
     <ClInclude Include="DataStructures\Graph\Vertex.h" />
     <ClInclude Include="DataStructures\LinkedList\LinkedList.h" />
     <ClInclude Include="DataStructures\LinkedList\LinkedListNode.h" />
@@ -141,13 +145,19 @@
     <ClInclude Include="DataStructures\SkipList\Source\Node_imp.h" />
     <ClInclude Include="DataStructures\SkipList\Source\SkipList_imp.h" />
     <ClInclude Include="Engine\Engine.h" />
+    <ClInclude Include="Tests\doctest.h" />
     <ClInclude Include="TravelRoutes\Route.h" />
     <ClInclude Include="TravelRoutes\RouteIO.h" />
     <ClInclude Include="TravelRoutes\TrainConnection.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CityTrip\Source\CityTrip.cpp" />
     <ClCompile Include="Engine\Source\Engine.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Tests\CityTripTests.cpp" />
+    <ClCompile Include="Tests\RouteTests.cpp" />
+    <ClCompile Include="Tests\SkipListTests.cpp" />
+    <ClCompile Include="Tests\Tests.cpp" />
     <ClCompile Include="TravelRoutes\Source\Route.cpp" />
     <ClCompile Include="TravelRoutes\Source\RouteIO.cpp" />
   </ItemGroup>
